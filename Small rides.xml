@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod>
+  <ModName>Small rides</ModName>
+  <ModDiscription>Add two small rides to the game</ModDiscription>
+  <Objects>
+    <Object>
+      <OBJName>Loopster</OBJName>
+      <Type>FlatRide</Type>
+      <X>4</X>
+      <Z>4</Z>
+      <inGameName>Loopster</inGameName>
+      <price>400</price>
+      <grid>false</grid>
+      <snapCenter>true</snapCenter>
+      <category></category>
+      <heightDelta>0</heightDelta>
+      <shader>Diffuse</shader>
+      <RestraintAngle>(-54.0, 0.0, 0.0)</RestraintAngle>
+      <Excitement>0.23</Excitement>
+      <Intensity>0.34</Intensity>
+      <Nausea>0.1</Nausea>
+      <recolorable>true</recolorable>
+      <Color1>FF4747</Color1>
+      <Color2>9BFF6C</Color2>
+      <Color3>4CCBDD</Color3>
+      <Color4>002BFF</Color4>
+      <BoudingBoxes>
+        <BoudingBox>
+          <min>(-2.0, 0.0, -2.0)</min>
+          <max>(2.0, 1.3, 2.0)</max>
+        </BoudingBox>
+      </BoudingBoxes>
+      <Animation>
+        <motors>
+          <Rotator>
+            <Identifier>MainRotator</Identifier>
+            <axis>Cone/Cone_2</axis>
+            <maxSpeed>90</maxSpeed>
+            <accelerationSpeed>12</accelerationSpeed>
+            <rotationAxis>(0.0, 1.0, 0.0)</rotationAxis>
+          </Rotator>
+          <Rotator>
+            <Identifier>ArmRotator</Identifier>
+            <axis>Cone/Cone_2/Cloner/Cube_0/Cylinder_2/Boole_1</axis>
+            <maxSpeed>180</maxSpeed>
+            <accelerationSpeed>48</accelerationSpeed>
+            <rotationAxis>(1.0, 0.0, 0.0)</rotationAxis>
+          </Rotator>
+          <MultipleRotations>
+            <Identifier>ArmRotators</Identifier>
+            <MainAxis>Cone/Cone_2/Cloner/Cube_0/Cylinder_2/Boole_1</MainAxis>
+            <axis>Cone/Cone_2/Cloner/Cube_1/Cylinder_4/Boole_1_2</axis>
+            <axis>Cone/Cone_2/Cloner/Cube_4/Cylinder_10/Boole_1_5</axis>
+            <axis>Cone/Cone_2/Cloner/Cube_2/Cylinder_6/Boole_1_3</axis>
+            <axis>Cone/Cone_2/Cloner/Cube_3/Cylinder_8/Boole_1_4</axis>
+            <axis>Cone/Cone_2/Cloner/Cube_5/Cylinder_12/Boole_1_6</axis>
+          </MultipleRotations>
+        </motors>
+        <phases>
+          <phase>
+            <events>
+              <StartRotator>
+                <Identifier>MainRotator</Identifier>
+              </StartRotator>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <StartRotator>
+                <Identifier>ArmRotator</Identifier>
+              </StartRotator>
+              <SpinRotator>
+                <Identifier>MainRotator</Identifier>
+                <spin>false</spin>
+                <spins>1</spins>
+              </SpinRotator>
+              <ApplyRotation>
+                <Identifier>ArmRotators</Identifier>
+              </ApplyRotation>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <SpinRotator>
+                <Identifier>ArmRotator</Identifier>
+                <spin>false</spin>
+                <spins>1</spins>
+              </SpinRotator>
+              <SpinRotator>
+                <Identifier>MainRotator</Identifier>
+                <spin>true</spin>
+                <spins>3</spins>
+              </SpinRotator>
+              <ApplyRotation>
+                <Identifier>ArmRotators</Identifier>
+              </ApplyRotation>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <StopRotator>
+                <Identifier>MainRotator</Identifier>
+              </StopRotator>
+              <StopRotator>
+                <Identifier>ArmRotator</Identifier>
+              </StopRotator>
+              <ApplyRotation>
+                <Identifier>ArmRotators</Identifier>
+              </ApplyRotation>
+            </events>
+          </phase>
+        </phases>
+      </Animation>
+      <Waypoints>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>13,1,4,16</connectedTo>
+          <localPosition>(-1.1, 0.0, -1.1)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>13,2,0,16</connectedTo>
+          <localPosition>(-1.5, 0.0, -0.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>14,1,3,20</connectedTo>
+          <localPosition>(-1.5, 0.0, 0.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>14,5,2,20</connectedTo>
+          <localPosition>(-1.3, 0.0, 1.2)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>13,6,0,17</connectedTo>
+          <localPosition>(-0.5, 0.0, -1.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>14,3,7,21</connectedTo>
+          <localPosition>(-0.5, 0.0, 1.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>12,4,8,17</connectedTo>
+          <localPosition>(0.5, 0.0, -1.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>15,11,21,5</connectedTo>
+          <localPosition>(0.5, 0.0, 1.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>12,6,9,18</connectedTo>
+          <localPosition>(1.2, 0.0, -1.2)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>12,10,8,18</connectedTo>
+          <localPosition>(1.5, 0.0, -0.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>15,9,11,19</connectedTo>
+          <localPosition>(1.5, 0.0, 0.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>15,10,7,19</connectedTo>
+          <localPosition>(1.3, 0.0, 1.2)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>6,8,9</connectedTo>
+          <localPosition>(1.5, 0.0, -1.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>1,0,4</connectedTo>
+          <localPosition>(-1.5, 0.0, -1.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>2,3,5</connectedTo>
+          <localPosition>(-1.5, 0.0, 1.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>7,11,10</connectedTo>
+          <localPosition>(1.5, 0.0, 1.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>0,1,29</connectedTo>
+          <localPosition>(-1.2, 0.0, -0.7)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>6,4,27</connectedTo>
+          <localPosition>(0.0, 0.0, -1.3)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>9,8,25</connectedTo>
+          <localPosition>(1.2, 0.0, -0.7)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>11,10,23</connectedTo>
+          <localPosition>(1.2, 0.0, 0.7)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>2,3,31</connectedTo>
+          <localPosition>(-1.2, 0.0, 0.7)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>7,5,22</connectedTo>
+          <localPosition>(-0.1, 0.0, 1.4)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>21,33</connectedTo>
+          <localPosition>(0.0, 0.1, 1.1)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>24,19</connectedTo>
+          <localPosition>(1.1, 0.1, 0.6)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>23</connectedTo>
+          <localPosition>(0.8, 0.1, 0.4)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>26,18</connectedTo>
+          <localPosition>(1.1, 0.1, -0.6)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>25</connectedTo>
+          <localPosition>(0.9, 0.1, -0.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>17,28</connectedTo>
+          <localPosition>(0.0, 0.1, -1.3)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>27</connectedTo>
+          <localPosition>(0.0, 0.1, -1.0)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>16,30</connectedTo>
+          <localPosition>(-1.0, 0.1, -0.6)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>29</connectedTo>
+          <localPosition>(-0.8, 0.1, -0.4)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>32,20</connectedTo>
+          <localPosition>(-1.1, 0.1, 0.6)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>31</connectedTo>
+          <localPosition>(-0.8, 0.1, 0.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>22</connectedTo>
+          <localPosition>(0.0, 0.1, 0.9)</localPosition>
+        </Waypoint>
+      </Waypoints>
+    </Object>
+    <Object>
+      <OBJName>Family Freefall Tower</OBJName>
+      <Type>FlatRide</Type>
+      <X>3</X>
+      <Z>3</Z>
+      <inGameName>Family Freefall Tower</inGameName>
+      <price>500</price>
+      <grid>false</grid>
+      <snapCenter>true</snapCenter>
+      <category />
+      <heightDelta>0</heightDelta>
+      <shader>Specular</shader>
+      <RestraintAngle>(0.0, 0.0, 120.0)</RestraintAngle>
+      <Excitement>0.2</Excitement>
+      <Intensity>0.32</Intensity>
+      <Nausea>0.01</Nausea>
+      <recolorable>true</recolorable>
+      <Color1>E23F3F</Color1>
+      <Color2>FFFFFF</Color2>
+      <Color3>FFD2D2</Color3>
+      <Color4>FF9E88</Color4>
+      <BoudingBoxes>
+        <BoudingBox>
+          <min>(1.5, 0.0, -1.5)</min>
+          <max>(-1.5, 4.8, 1.5)</max>
+        </BoudingBox>
+      </BoudingBoxes>
+      <Animation>
+        <motors>
+          <Rotator>
+            <Identifier>Rotator_1</Identifier>
+            <axis>Torus/Cloner</axis>
+            <maxSpeed>90</maxSpeed>
+            <accelerationSpeed>12</accelerationSpeed>
+            <rotationAxis>(0.0, 1.0, 0.0)</rotationAxis>
+          </Rotator>
+          <Mover>
+            <Identifier>Mover_2</Identifier>
+            <axis>Torus</axis>
+            <toPosition>(0.0, 2.9, 0.0)</toPosition>
+            <duration>5</duration>
+          </Mover>
+        </motors>
+        <phases>
+          <phase>
+            <events>
+              <StartRotator>
+                <Identifier>Rotator_1</Identifier>
+              </StartRotator>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <SpinRotator>
+                <Identifier>Rotator_1</Identifier>
+                <spin>true</spin>
+                <spins>2</spins>
+              </SpinRotator>
+              <FromToMove>
+                <Identifier>Mover_2</Identifier>
+              </FromToMove>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <SpinRotator>
+                <Identifier>Rotator_1</Identifier>
+                <spin>false</spin>
+                <spins>1</spins>
+              </SpinRotator>
+              <ToFromMove>
+                <Identifier>Mover_2</Identifier>
+              </ToFromMove>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <SpinRotator>
+                <Identifier>Rotator_1</Identifier>
+                <spin>true</spin>
+                <spins>2</spins>
+              </SpinRotator>
+              <FromToMove>
+                <Identifier>Mover_2</Identifier>
+              </FromToMove>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <SpinRotator>
+                <Identifier>Rotator_1</Identifier>
+                <spin>false</spin>
+                <spins>1</spins>
+              </SpinRotator>
+              <ToFromMove>
+                <Identifier>Mover_2</Identifier>
+              </ToFromMove>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <SpinRotator>
+                <Identifier>Rotator_1</Identifier>
+                <spin>true</spin>
+                <spins>2</spins>
+              </SpinRotator>
+              <FromToMove>
+                <Identifier>Mover_2</Identifier>
+              </FromToMove>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <SpinRotator>
+                <Identifier>Rotator_1</Identifier>
+                <spin>false</spin>
+                <spins>1</spins>
+              </SpinRotator>
+              <ToFromMove>
+                <Identifier>Mover_2</Identifier>
+              </ToFromMove>
+            </events>
+          </phase>
+          <phase>
+            <events>
+              <StopRotator>
+                <Identifier>Rotator_1</Identifier>
+              </StopRotator>
+            </events>
+          </phase>
+        </phases>
+      </Animation>
+      <Waypoints>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>11,15,14,13,1,3</connectedTo>
+          <localPosition>(-0.8, 0.0, -0.7)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>8,11,16,15,0,2</connectedTo>
+          <localPosition>(-1.0, 0.0, 0.0)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>8,17,16,18,4,1</connectedTo>
+          <localPosition>(-0.7, 0.0, 0.7)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>10,11,12,0,5</connectedTo>
+          <localPosition>(0.0, 0.0, -1.0)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>8,9,18,19,7,2</connectedTo>
+          <localPosition>(0.0, 0.0, 1.0)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>10,12,23,22,3,6</connectedTo>
+          <localPosition>(0.8, 0.0, -0.8)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>9,10,22,21,5,7</connectedTo>
+          <localPosition>(1.0, 0.0, 0.0)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>True</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>9,21,20,19,6,4</connectedTo>
+          <localPosition>(0.8, 0.0, 0.8)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>4,2,1,8,8</connectedTo>
+          <localPosition>(-1.0, 0.0, 1.0)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>4,7,6</connectedTo>
+          <localPosition>(1.0, 0.0, 1.0)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>6,5,3</connectedTo>
+          <localPosition>(1.0, 0.0, -1.0)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>3,0,1</connectedTo>
+          <localPosition>(-1.0, 0.0, -1.0)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>3,5</connectedTo>
+          <localPosition>(0.2, 0.0, -0.6)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>0</connectedTo>
+          <localPosition>(-0.2, 0.0, -0.6)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>0</connectedTo>
+          <localPosition>(-0.5, 0.0, -0.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>1,0</connectedTo>
+          <localPosition>(-0.6, 0.0, -0.2)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>2,1</connectedTo>
+          <localPosition>(-0.6, 0.0, 0.2)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>2</connectedTo>
+          <localPosition>(-0.5, 0.0, 0.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>4,2</connectedTo>
+          <localPosition>(-0.2, 0.0, 0.7)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>7,4</connectedTo>
+          <localPosition>(0.2, 0.0, 0.6)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>7</connectedTo>
+          <localPosition>(0.5, 0.0, 0.5)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>6,7</connectedTo>
+          <localPosition>(0.7, 0.0, 0.2)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>5,6</connectedTo>
+          <localPosition>(0.7, 0.0, -0.2)</localPosition>
+        </Waypoint>
+        <Waypoint>
+          <isOuter>False</isOuter>
+          <isRabbitHoleGoal>False</isRabbitHoleGoal>
+          <connectedTo>5</connectedTo>
+          <localPosition>(0.5, 0.0, -0.5)</localPosition>
+        </Waypoint>
+      </Waypoints>
+    </Object>
+  </Objects>
+</Mod>
